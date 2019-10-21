@@ -87,6 +87,74 @@ def judge(a):
                     stack.extend(range(count+1,num))
                     count=num
         return True
+#利用map()函数，把用户输入的不规范的英文名字，变为首字母大写，其他小写的规范名字。
+def normalize(name):
+    flag=0
+    for i in name:
+        for j in i:
+            if ord(j)>=97 and ord(j)<=122 and flag==0:
+                j=j.swapcase()
+            elif ord(j)>=65 and ord(j)<=90 and flag!=0:
+                j=j.swapcase()
+            else:
+                pass
+            flag+=1
+    return name
+
+#计算出素数
+def _odd_iter():
+    n=1
+    while True:
+        n=n+2
+        yield n
+
+#定义筛选器
+def _not_divisible(n):
+    return lambda x:x%n>0
+
+def primes():
+    yield 2
+    it = _odd_iter()
+    while True:
+        n=next(it)
+        yield n
+        it = filter(_not_divisible(n),it)
+
+#筛选出回数
+def is_palindrome(n):
+    n='%d' %n #转化为字符串
+    length=len(n)
+    len_n=length//2
+    for a in range(len_n):
+        if n[a] != n[length-1-a]:
+            return False
+    return True
+
+#返回函数
+def lazy_sum(*args):
+    def sum():
+        ax=0
+        for i in args:
+            ax=i+ax
+        return ax
+    return sum
+
+def count():
+    fs = []
+    for i in range(1, 4):
+        def f():
+             return i*i
+        fs.append(f)
+    return fs
+
+def createCounter():
+
+
+def test():
+    a=[1]
+    a[0]=a[0]+1
+    return a
+
 
 
 

@@ -16,7 +16,18 @@ if __name__ == '__main__':
     # move(2,'a','b','c')
 # print(trim('  dasdasd  ')+'wwww')
 #     print(findMinAndMax([1,2,3,4]))
-    print(judge([2,1,3,4]))
+#     print(judge([2,1,3,4]))
+#     L1 = ['adam', 'LISA', 'barT']
+#     L2 = normalize(L1)
+#     pass
+#     a=_odd_iter()
+#     for n in primes():
+#         if n<=100:
+#             print(n)
+#         else:
+#             break
+#     a=filter(is_palindrome,range(1,1000))
+#     print(list(a))
 
 
 
